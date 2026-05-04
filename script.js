@@ -19,3 +19,13 @@ if (randomNumber === 1) {
 }
 
 }
+
+
+function getHumanChoice() {
+
+    const choice = prompt("Choose between rock, paper and scissor!, (all lowercase)", "");
+    return choice;
+}
+
+
+
