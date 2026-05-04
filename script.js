@@ -53,35 +53,42 @@ let computerScore = 0;
 
         case "rock-scissor":
             console.log("You Win! Rock beats Scissor.");
-            humanScore++;
+            ++humanScore;
             break;
 
         case "paper-rock":
             console.log("You Win! Paper beats Rock.");
-            humanScore++;
+            ++humanScore;
             break;
 
         case "scissor-paper":
             console.log("You Win! Scissor beats Paper.");
-            humanScore++;
+            ++humanScore;
             break;
 
         case "rock-paper":
             console.log("You lose! Paper beats Rock.");
-            computerScore++;
+            ++computerScore;
             break;
 
         case "paper-scissor":
             console.log("You lose! Scissor beats paper.");
-            computerScore++;
+            ++computerScore;
             break;
 
         case "scissor-rock":
             console.log("You lose! Rock beats scissor");
-            computerScore++;
+            ++computerScore;
             break;
     }
 
+    if (humanScore > computerScore) {
+        return 1;
+    } else if (computerScore > humanScore) {
+        return 2;
+    } else {
+        return 0;
+    }
 }
 
 
@@ -94,23 +101,67 @@ let humanSelection = getHumanChoice();
 let computerSelection = getComputerChoice();
 
 
-playRound(humanSelection, computerSelection);
-
-humanSelection = getHumanChoice();
-computerSelection = getComputerChoice();
-playRound(humanSelection, computerSelection);
-
-humanSelection = getHumanChoice();
-computerSelection = getComputerChoice();
-playRound(humanSelection, computerSelection);
-
-humanSelection = getHumanChoice();
-computerSelection = getComputerChoice();
-playRound(humanSelection, computerSelection);
-
-humanSelection = getHumanChoice();
-computerSelection = getComputerChoice();
-playRound(humanSelection, computerSelection);
+let generalScore = playRound(humanSelection, computerSelection);
+if (generalScore === 1) {
+    ++humanScore;
+} else if (generalScore === 2) {
+    ++computerScore;
 }
+
+console.log(humanScore, computerScore);
+
+humanSelection = getHumanChoice();
+computerSelection = getComputerChoice();
+generalScore = playRound(humanSelection, computerSelection);
+if (generalScore === 1) {
+    ++humanScore;
+} else if (generalScore === 2) {
+    ++computerScore;
+}
+
+console.log(humanScore, computerScore);
+
+humanSelection = getHumanChoice();
+computerSelection = getComputerChoice();
+generalScore = playRound(humanSelection, computerSelection);
+if (generalScore === 1) {
+    ++humanScore;
+} else if (generalScore === 2) {
+    ++computerScore;
+}
+
+console.log(humanScore, computerScore);
+
+humanSelection = getHumanChoice();
+computerSelection = getComputerChoice();
+generalScore = playRound(humanSelection, computerSelection);
+if (generalScore === 1) {
+    ++humanScore;
+} else if (generalScore === 2) {
+    ++computerScore;
+}
+
+console.log(humanScore, computerScore);
+
+humanSelection = getHumanChoice();
+computerSelection = getComputerChoice();
+generalScore = playRound(humanSelection, computerSelection);
+if (generalScore === 1) {
+    ++humanScore;
+} else if (generalScore === 2) {
+    ++computerScore;
+}
+
+console.log(humanScore, computerScore);
+
+if (humanScore > computerScore) {
+    console.log("You Won the game!");
+} else if (computerScore > humanScore) {
+    console.log("You lost the game!");
+} else {
+    console.log("It's a tie");
+}
+}
+
 
 playGame();
