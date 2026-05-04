@@ -1,5 +1,4 @@
-let humanScore = 0;
-let computerScore = 0;
+
 
 // Create a function named getComputerChoice;
 function getComputerChoice() {
@@ -36,6 +35,8 @@ function getHumanChoice() {
 function playRound(humanChoice, computerChoice) {
 console.log(humanChoice);
 
+let humanScore = 0;
+let computerScore = 0;
     switch (humanChoice + "-" + computerChoice) {
 
         case "rock-rock":
@@ -83,8 +84,33 @@ console.log(humanChoice);
 
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+
+
+function playGame() {
+let humanScore = 0;
+let computerScore = 0;
+
+let humanSelection = getHumanChoice();
+let computerSelection = getComputerChoice();
+
 
 playRound(humanSelection, computerSelection);
 
+humanSelection = getHumanChoice();
+computerSelection = getComputerChoice();
+playRound(humanSelection, computerSelection);
+
+humanSelection = getHumanChoice();
+computerSelection = getComputerChoice();
+playRound(humanSelection, computerSelection);
+
+humanSelection = getHumanChoice();
+computerSelection = getComputerChoice();
+playRound(humanSelection, computerSelection);
+
+humanSelection = getHumanChoice();
+computerSelection = getComputerChoice();
+playRound(humanSelection, computerSelection);
+}
+
+playGame();
