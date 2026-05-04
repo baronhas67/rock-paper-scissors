@@ -12,7 +12,6 @@ function getComputerChoice() {
 
 let randomNumber = Math.floor(Math.random() * 3) + 1;
 
-console.log(randomNumber);
 if (randomNumber === 1) {
     return "rock";
 } else if (randomNumber === 2) {
@@ -33,7 +32,7 @@ function getHumanChoice() {
 }
 
 function playRound(humanChoice, computerChoice) {
-console.log(humanChoice);
+console.log("Your choice: " + humanChoice);
 
 let humanScore = 0;
 let computerScore = 0;
@@ -108,7 +107,7 @@ if (generalScore === 1) {
     ++computerScore;
 }
 
-console.log(humanScore, computerScore);
+
 
 humanSelection = getHumanChoice();
 computerSelection = getComputerChoice();
@@ -119,7 +118,7 @@ if (generalScore === 1) {
     ++computerScore;
 }
 
-console.log(humanScore, computerScore);
+
 
 humanSelection = getHumanChoice();
 computerSelection = getComputerChoice();
@@ -130,7 +129,7 @@ if (generalScore === 1) {
     ++computerScore;
 }
 
-console.log(humanScore, computerScore);
+
 
 humanSelection = getHumanChoice();
 computerSelection = getComputerChoice();
@@ -141,7 +140,7 @@ if (generalScore === 1) {
     ++computerScore;
 }
 
-console.log(humanScore, computerScore);
+
 
 humanSelection = getHumanChoice();
 computerSelection = getComputerChoice();
@@ -152,7 +151,7 @@ if (generalScore === 1) {
     ++computerScore;
 }
 
-console.log(humanScore, computerScore);
+
 
 if (humanScore > computerScore) {
     console.log("You Won the game!");
